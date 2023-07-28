@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/Icon.png" type="image/x-icon" />
+  </head>
+  <body class="bg-info">
+    <div class="container position-relative">
+      <div
+        class="w-50 mx-auto my-5 border border-3 shadow-lg p-4 bg-info bg-opacity-75 rounded-2"
+      >
+        <h3 class="text-center text-white">Smart Login System</h3>
+        <div class="my-4">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="Lemail"
+              placeholder="Enter your email"
+            />
+            <label for="email">Enter your email</label>
+          </div>
+        </div>
+        <div class="my-4">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="Lpassword"
+              placeholder="Enter your password"
+            />
+            <label for="password">Enter your password</label>
+          </div>
+        </div>
+        <p id="LStatusLogin"></p>
+        <div class="my-4 d-grid">
+          <button class="btn btn-primary btn-lg p-3" type="button" id="Llogin">
+            Login
+          </button>
+        </div>
+        <p class="text-center text-white">
+          Don’t have an account?
+          <a class="text-white d-inline-block" href="./signin.html">Sign Up</a>
+        </p>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
