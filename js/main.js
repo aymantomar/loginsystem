@@ -46,7 +46,7 @@ function CreateUser() {
     MessageContainer.classList.add("text-success", "text-center");
     MessageContainer.classList.remove("text-danger");
   }, 4000);
-  window.location = "../index.html";
+  window.location = "../loginsystem/index.html";
 }
 
 function ClrData() {
@@ -151,7 +151,7 @@ function checkMail() {
       Message.innerHTML = "Login Successfully";
       Message.classList.remove("text-danger");
       Message.classList.add("text-success", "text-center");
-      window.location = "../home.html";
+      window.location = "../loginsystem/home.html";
     } else if (
       email.value != UserAccess[i].userEmail &&
       password.value != UserAccess[i].userPassword
@@ -177,7 +177,7 @@ for (let i = 0; i < UserAccess.length; i++) {
 if (logoutBtn !== null) {
   logoutBtn.addEventListener("click", function () {
     localStorage.removeItem("user");
-    window.location = "../index.html";
+    window.location = "../loginsystem/index.html";
   });
 }
 //* End Home */
