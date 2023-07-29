@@ -108,20 +108,8 @@ h5 {
     margin: 0 auto !important;
   }
 }
-
-@media screen and (min-width: 375px) {
-  .w-50 {
-    width: 100% !important;
-  }
-}
-
-@media (min-width: 576px) {
-  .w-50 {
-    width: 100% !important;
-  }
-}
-
-@media (min-width: 768px) {
+@media (max-width: 575.98px) {
+  .fullSize,
   .w-50 {
     width: 100% !important;
   }
