@@ -54,6 +54,18 @@ h5 {
   animation: fadeIn 1s ease-in both;
 }
 
+.view-password:before {
+  content: "\f06e";
+}
+.show {
+  background: none;
+  right: 10px;
+  border: none;
+}
+.top-30 {
+  top: 28%;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -76,16 +88,4 @@ h5 {
     width: 94% !important;
     margin: 0 auto !important;
   }
-}
-
-.view-password:before {
-  content: "\f06e";
-}
-.show {
-  background: none;
-  right: 10px;
-  border: none;
-}
-.top-30 {
-  top: 28%;
 }
