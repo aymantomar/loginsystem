@@ -7,7 +7,7 @@ var SignInBtn = document.getElementById("login");
 var showPass = document.getElementById("showPassword");
 var showPassIcon = document.querySelector("#showPassword i");
 
-console.log(showPassIcon);
+// console.log(showPassIcon);
 
 // console.log("xxxxxxxxxxxxxxxxxx", SignUser, SignEmail, SignPassword, SignInBtn);
 
