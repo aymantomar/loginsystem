@@ -4,6 +4,10 @@ var SignEmail = document.getElementById("email");
 var SignPassword = document.getElementById("password");
 var MessageContainer = document.getElementById("msg");
 var SignInBtn = document.getElementById("login");
+var showPass = document.getElementById("showPassword");
+var showPassIcon = document.querySelector("#showPassword i");
+
+console.log(showPassIcon);
 
 // console.log("xxxxxxxxxxxxxxxxxx", SignUser, SignEmail, SignPassword, SignInBtn);
 
@@ -29,6 +33,15 @@ if (SignInBtn !== null) {
     } else if (validUserName() && validEmailName() && validPassword()) {
       CreateUser();
     }
+  });
+}
+
+if (showPass !== null) {
+  showPass.addEventListener("click", function () {
+    const type =
+      SignPassword.getAttribute("type") === "password" ? "text" : "password";
+    SignPassword.setAttribute("type", type);
+    showPassIcon.classList.toggle("view-password");
   });
 }
 
@@ -123,9 +136,11 @@ var password = document.getElementById("Lpassword");
 var loginBtn = document.getElementById("Llogin");
 var Message = document.getElementById("LStatusLogin");
 
-var UserAccess = JSON.parse(localStorage.getItem("user"));
+if (JSON.parse(localStorage.getItem("user")) !== null) {
+  var UserAccess = JSON.parse(localStorage.getItem("user"));
+}
 
-console.log(email, password, loginBtn, Message);
+// console.log(email, password, loginBtn, Message);
 
 if (loginBtn !== null) {
   loginBtn.addEventListener("click", function () {
@@ -134,7 +149,7 @@ if (loginBtn !== null) {
 }
 
 function login() {
-  if (email.value === " " && password.value === " ") {
+  if (email.value == " " && password.value == " ") {
     Message.innerHTML = "All input is required";
     Message.classList.add("text-danger", "text-center");
   } else {

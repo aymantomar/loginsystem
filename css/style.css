@@ -67,7 +67,7 @@ h5 {
 
 @media (max-width: 320px) {
   .w-50 {
-    width: 100%;
+    width: 100% !important;
   }
   .alertPos {
     display: none;
@@ -76,4 +76,16 @@ h5 {
     width: 94% !important;
     margin: 0 auto !important;
   }
+}
+
+.view-password:before {
+  content: "\f06e";
+}
+.show {
+  background: none;
+  right: 10px;
+  border: none;
+}
+.top-30 {
+  top: 28%;
 }
