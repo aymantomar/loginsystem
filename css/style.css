@@ -54,6 +54,31 @@ h5 {
   animation: fadeIn 1s ease-in both;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.icon {
+  position: relative;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .view-password:before {
   content: "\f06e";
 }
@@ -65,16 +90,10 @@ h5 {
 .top-30 {
   top: 28%;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -20%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+.otpSty {
+  right: 10px;
+  top: 32%;
+  cursor: pointer;
 }
 
 @media (max-width: 320px) {

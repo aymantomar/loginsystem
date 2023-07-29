@@ -41,9 +41,38 @@
               placeholder="Enter your password"
             />
             <label for="password">Enter your password</label>
+            <button id="loginPass" class="position-absolute top-30 show">
+              <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
-        <p id="LStatusLogin"></p>
+        <div class="otp d-flex justify-content-between">
+          <div class="w-50 me-3">
+            <p class="text-white small top-100 w-100">Enter Otp code here</p>
+            <input
+              type="text"
+              class="form-control w-100 p-3"
+              id="otp"
+              placeholder="Enter Otp here"
+              maxlength="4"
+            />
+          </div>
+          <div class="w-50">
+            <p class="text-white small top-100 w-100">
+              Click icon to get otp code
+            </p>
+            <div class="position-relative w-100 p-3 border border-1 rounded-3">
+              <i
+                class="fa fa-refresh position-absolute top-30 otpSty icon"
+                id="btnGenrater"
+                aria-hidden="true"
+              ></i>
+              <span class="d-inline">OTP is:</span>
+              <span class="d-inline optNumber"></span>
+            </div>
+          </div>
+        </div>
+        <p id="LStatusLogin" class="pt-3"></p>
         <div class="my-4 d-grid">
           <button class="btn btn-primary btn-lg p-3" type="button" id="Llogin">
             Login

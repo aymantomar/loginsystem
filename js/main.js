@@ -36,15 +36,6 @@ if (SignInBtn !== null) {
   });
 }
 
-if (showPass !== null) {
-  showPass.addEventListener("click", function () {
-    const type =
-      SignPassword.getAttribute("type") === "password" ? "text" : "password";
-    SignPassword.setAttribute("type", type);
-    showPassIcon.classList.toggle("view-password");
-  });
-}
-
 function CreateUser() {
   var user = {
     userName: SignUser.value,
@@ -75,7 +66,14 @@ function emailAlready() {
     }
   }
 }
-
+if (showPass != null) {
+  showPass.addEventListener("click", function () {
+    const type =
+      SignPassword.getAttribute("type") === "password" ? "text" : "password";
+    SignPassword.setAttribute("type", type);
+    showPassIcon.classList.toggle("view-password");
+  });
+}
 function validUserName() {
   var regex = /^[a-zA-Z]+$/g;
   var signUser = SignUser.value;
@@ -134,10 +132,24 @@ function validPassword() {
 var email = document.getElementById("Lemail");
 var password = document.getElementById("Lpassword");
 var loginBtn = document.getElementById("Llogin");
+var loginPass = document.getElementById("loginPass");
+var LoginShowPassIcon = document.querySelector("#loginPass i");
 var Message = document.getElementById("LStatusLogin");
+var otpDiv = document.querySelector(".optNumber");
+var otpInput = document.getElementById("otp");
+var otpBtn = document.getElementById("btnGenrater");
 
 if (JSON.parse(localStorage.getItem("user")) !== null) {
   var UserAccess = JSON.parse(localStorage.getItem("user"));
+}
+
+if (loginPass != null) {
+  loginPass.addEventListener("click", function () {
+    const loginShow =
+      password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", loginShow);
+    LoginShowPassIcon.classList.toggle("view-password");
+  });
 }
 
 // console.log(email, password, loginBtn, Message);
@@ -148,12 +160,27 @@ if (loginBtn !== null) {
   });
 }
 
+if (otpBtn !== null) {
+  otpBtn.addEventListener("click", function () {
+    var digitNumber = "0123456789";
+    var otp = "";
+    for (let i = 0; i < 4; i++) {
+      otp += digitNumber[Math.floor(Math.random() * 10)];
+    }
+    otpDiv.innerHTML = `${otp}`;
+  });
+}
+
 function login() {
   if (email.value == " " && password.value == " ") {
     Message.innerHTML = "All input is required";
     Message.classList.add("text-danger", "text-center");
-  } else {
+  } else if (otpInput.value === otpDiv.innerText) {
     checkMail();
+    otpInput.value = " ";
+  } else {
+    Message.innerHTML = "Please Check Otp Number";
+    Message.classList.add("text-danger", "text-center");
   }
 }
 
